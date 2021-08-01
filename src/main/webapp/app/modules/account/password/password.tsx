@@ -3,9 +3,9 @@ import { ValidatedField, ValidatedForm } from 'react-jhipster';
 import { Row, Col, Button } from 'reactstrap';
 import { toast } from 'react-toastify';
 
-import { useAppDispatch, useAppSelector } from 'app/config/store';
-import { getSession } from 'app/shared/reducers/authentication';
-import PasswordStrengthBar from 'app/shared/layout/password/password-strength-bar';
+import { useAppDispatch, useAppSelector } from '../../../../app/config/store';
+import { getSession } from '../../../../app/shared/reducers/authentication';
+import PasswordStrengthBar from '../../../../app/shared/layout/password/password-strength-bar';
 import { savePassword, reset } from './password.reducer';
 
 export const PasswordPage = () => {
@@ -43,7 +43,7 @@ export const PasswordPage = () => {
       <Row className="justify-content-center">
         <Col md="8">
           <h2 id="password-title">Password for {account.login}</h2>
-          <ValidatedForm id="password-form" onSubmit={handleValidSubmit}>
+          <ValidatedForm id="password-form" onSubmit={() => handleValidSubmit}>
             <ValidatedField
               name="currentPassword"
               label="Current password"
