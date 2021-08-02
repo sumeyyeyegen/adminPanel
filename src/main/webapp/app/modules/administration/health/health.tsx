@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Table, Badge, Col, Row, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { useAppDispatch, useAppSelector } from 'app/config/store';
+import { useAppDispatch, useAppSelector } from '../../../../app/config/store';
 import HealthModal from './health-modal';
 import { getSystemHealth } from '../administration.reducer';
 
